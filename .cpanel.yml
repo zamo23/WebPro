@@ -1,4 +1,6 @@
+---
 deployment:
   tasks:
     - export DEPLOYPATH=/home/cvpxlat/webpro.cvpx.lat
-    - /usr/bin/rsync -a --delete dist/ $DEPLOYPATH
+    - /bin/mkdir -p $DEPLOYPATH
+    - /bin/cp -a dist/. $DEPLOYPATH
